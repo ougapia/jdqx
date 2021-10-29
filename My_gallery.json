@@ -2,6 +2,6 @@
  "name": "my gallery",
  "description": "",
  "task": [
-    {"config":"11 * * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld?token=AF7KEWF6SUCHO26UBS5GBMLBPNQXK, tag=极速版签到，img-url=", "addons":""}
+    {"config":"11 * * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld?token=AF7KEWF6SUCHO26UBS5GBMLBPNQXK, tag=极速版签到"}
   ]
 }
