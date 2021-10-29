@@ -2,7 +2,8 @@
  "name": "my gallery",
  "description": "",
  "task": [
-  {"config":"1 7-21/2 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_plantBean_JDHelloWorld.js, tag=种豆得豆"},
-  {"config":"1 7,19 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld.js, tag=极速版签到"}
+  {"config":"15 0-23/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_pigPet_JDHelloWorld.us,tag=金融养猪"},
+  {"config":"11 7-21/2 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_plantBean_JDHelloWorld.js, tag=种豆得豆"},
+  {"config":"31 8,20 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld.js, tag=极速版签到"}
   ]
 }
