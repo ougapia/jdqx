@@ -32,7 +32,7 @@ let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, n
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [''], message = '', subTitle = '', option = {}, isFruitFinished = false;
-const retainWater = 100;//保留水滴大于多少g,默认100g;
+const retainWater = 1000;//保留水滴大于多少g,默认100g;
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
 let jdFruitBeanCard = false;//农场使用水滴换豆卡(如果出现限时活动时100g水换20豆,此时比浇水划算,推荐换豆),true表示换豆(不浇水),false表示不换豆(继续浇水),脚本默认是浇水
 let randomCount = $.isNode() ? 20 : 5;
@@ -116,7 +116,7 @@ async function jdFruit() {
       await getTenWaterAward();//领取10浇水奖励
       await getWaterFriendGotAward();//领取为2好友浇水奖励
       await duck();
-      //await doTenWaterAgain();//再次浇水
+      await doTenWaterAgain();//再次浇水
       await predictionFruit();//预测水果成熟时间
     } else {
       console.log(`初始化农场数据异常, 请登录京东 app查看农场0元水果功能是否正常,农场初始化数据: ${JSON.stringify($.farmInfo)}`);
@@ -231,7 +231,7 @@ async function doDailyTask() {
     console.log('当前不在定时领水时间断或者已经领过\n')
   }
   //给好友浇水
-  //if (!$.farmTask.waterFriendTaskInit.f) {
+  if (!$.farmTask.waterFriendTaskInit.f) {
     if ($.farmTask.waterFriendTaskInit.waterFriendCountKey < $.farmTask.waterFriendTaskInit.waterFriendMax) {
       await doFriendsWater();
     }
@@ -564,7 +564,7 @@ async function turntableFarm() {
         console.log('天天抽奖-不能自己给自己助力\n')
         continue
       }
-      //await lotteryMasterHelp(code);
+      await lotteryMasterHelp(code);
       // console.log('天天抽奖助力结果',lotteryMasterHelpRes.helpResult)
       if ($.lotteryMasterHelpRes.helpResult.code === '0') {
         console.log(`天天抽奖-助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}成功\n`)
