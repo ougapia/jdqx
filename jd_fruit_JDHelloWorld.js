@@ -91,7 +91,7 @@ async function jdFruit() {
 
       console.log(`\n【已成功兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`);
       message += `【已兑换水果】${$.farmInfo.farmUserPro.winTimes}次\n`;
-      //await masterHelpShare();//助力好友
+      await masterHelpShare();//助力好友
       if ($.farmInfo.treeState === 2 || $.farmInfo.treeState === 3) {
         option['open-url'] = urlSchema;
         $.msg($.name, ``, `【京东账号${$.index}】${$.nickName || $.UserName}\n【提醒⏰】${$.farmInfo.farmUserPro.name}已可领取\n请去京东APP或微信小程序查看\n点击弹窗即达`, option);
@@ -231,7 +231,7 @@ async function doDailyTask() {
     console.log('当前不在定时领水时间断或者已经领过\n')
   }
   //给好友浇水
-  if (!$.farmTask.waterFriendTaskInit.f) {
+  //if (!$.farmTask.waterFriendTaskInit.f) {
     if ($.farmTask.waterFriendTaskInit.waterFriendCountKey < $.farmTask.waterFriendTaskInit.waterFriendMax) {
       await doFriendsWater();
     }
@@ -559,21 +559,21 @@ async function turntableFarm() {
     }
     //天天抽奖助力
     console.log('开始天天抽奖--好友助力--每人每天只有三次助力机会.')
-    //for (let code of newShareCodes) {
-      //if (code === $.farmInfo.farmUserPro.shareCode) {
-        //console.log('天天抽奖-不能自己给自己助力\n')
-        //continue
-      //}
+    for (let code of newShareCodes) {
+      if (code === $.farmInfo.farmUserPro.shareCode) {
+        console.log('天天抽奖-不能自己给自己助力\n')
+        continue
+      }
       //await lotteryMasterHelp(code);
       // console.log('天天抽奖助力结果',lotteryMasterHelpRes.helpResult)
-      //if ($.lotteryMasterHelpRes.helpResult.code === '0') {
-        //console.log(`天天抽奖-助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}成功\n`)
-      //} else if ($.lotteryMasterHelpRes.helpResult.code === '11') {
-        //console.log(`天天抽奖-不要重复助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}\n`)
-      //} else if ($.lotteryMasterHelpRes.helpResult.code === '13') {
-        //console.log(`天天抽奖-助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}失败,助力次数耗尽\n`);
-        //break;
-      //}
+      if ($.lotteryMasterHelpRes.helpResult.code === '0') {
+        console.log(`天天抽奖-助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}成功\n`)
+      } else if ($.lotteryMasterHelpRes.helpResult.code === '11') {
+        console.log(`天天抽奖-不要重复助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}\n`)
+      } else if ($.lotteryMasterHelpRes.helpResult.code === '13') {
+        console.log(`天天抽奖-助力${$.lotteryMasterHelpRes.helpResult.masterUserInfo.nickName}失败,助力次数耗尽\n`);
+        break;
+      }
     }
     console.log(`---天天抽奖次数remainLotteryTimes----${remainLotteryTimes}次`)
     //抽奖
