@@ -29,7 +29,7 @@ let cookiesArr = [], cookie = '', notify, newShareCodes, allMessage = '';
 let shareCodes = ['8e39658919884edca9bbc57a3e76f463@b94a0c48b0204364a585384f05ca1a12@8ef54fe9c4b444d19ff98ceada3f4ea1','8e39658919884edca9bbc57a3e76f463@b94a0c48b0204364a585384f05ca1a12@8ef54fe9c4b444d19ff98ceada3f4ea1'], message = '', subTitle = '', option = {}, isFruitFinished = false;
 const retainWater = 1000;//保留水滴大于多少g,默认100g;
 let jdNotify = false;//是否关闭通知，false打开通知推送，true关闭通知推送
-let jdFruitBeanCard = true;//农场使用水滴换豆卡(如果出现限时活动时100g水换20豆,此时比浇水划算,推荐换豆),true表示换豆(不浇水),false表示不换豆(继续浇水),脚本默认是浇水
+let jdFruitBeanCard = false;//农场使用水滴换豆卡(如果出现限时活动时100g水换20豆,此时比浇水划算,推荐换豆),true表示换豆(不浇水),false表示不换豆(继续浇水),脚本默认是浇水
 let randomCount = $.isNode() ? 20 : 5;
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const newPrizeBody = {"version": 14, "channel": 1, "babelChannel": "120"};
