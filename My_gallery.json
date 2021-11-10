@@ -3,7 +3,7 @@
  "description": "",
  "task": [
    {"config":"10 6-18/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_pet_JDHelloWorld.js,tag=东东萌宠"},
-  {"config":"2 6-18/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_fruit_JDHelloWorld.js,tag=农场水果"},
+  {"config":"2 6-18/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_fruit_JDHelloWorld.js,tag=东东农场"},
   {"config":"15 0-23/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_pigPet_JDHelloWorld.js,tag=金融养猪"},
   {"config":"0 7-21/2 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_plantBean_JDHelloWorld.js, tag=种豆得豆"},
   {"config":"31 8,20 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld.js, tag=极速版签到"}
