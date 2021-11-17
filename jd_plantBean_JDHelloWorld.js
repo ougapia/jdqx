@@ -131,10 +131,8 @@ function runTimes(){
         console.log('上报失败', err)
         reject(err)
       } else {
-        if (data === '1' || data === '0') {
-          console.log('上报成功')
-          resolve()
-        }
+        console.log(data)
+        resolve()
       }
     })
   })
@@ -629,7 +627,7 @@ function requireConfig() {
 function requestGet(function_id, body = {}) {
   if (!body.version) {
     body["version"] = "9.0.0.1";
-  }
+  }d
   body["monitor_source"] = "plant_app_plant_index";
   body["monitor_refer"] = "";
   return new Promise(async resolve => {
