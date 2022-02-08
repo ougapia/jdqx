@@ -7,5 +7,6 @@
   {"config":"15 0-23/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_pigPet_JDHelloWorld.js,tag=金融养猪"},
   {"config":"0 7-21/2 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_plantBean_JDHelloWorld.js, tag=种豆得豆"},
   {"config":"31 8,20 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld.js, tag=极速版签到"}
+  {"config":"10 0 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jx_sign.js, tag=京喜签到"}
   ]
 }
