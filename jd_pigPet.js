@@ -452,6 +452,15 @@ async function missions() {
       } else {
         await pigPetDoMission(item.mid);
         await $.wait(1000)
+      let parse
+      if (parse.query && parse.query.readTime) {
+          await queryMissionReceiveAfterStatus(parse.query.missionId);
+          await $.wait(parse.query.readTime * 1000)
+          await finishReadMission(parse.query.missionId, parse.query.readTime);
+        } else if (parse.query && parse.query.juid) {
+          await getJumpInfo(parse.query.juid)
+          await $.wait(4000)
+        }
       }
     }
   }
