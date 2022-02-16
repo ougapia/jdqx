@@ -25,7 +25,8 @@ cron "12 0-23/6 * * *" script-path=jd_pigPet.js, tag=京东金融养猪猪
  */
 
 const $ = new Env('金融养猪');
-let cookiesArr = [], cookie = '', allMessage = '', url = '';
+//const url = require('url');
+let cookiesArr = [], cookie = '', allMessage = '';
 const JD_API_HOST = 'https://ms.jr.jd.com/gw/generic/uc/h5/m';
 const MISSION_BASE_API = `https://ms.jr.jd.com/gw/generic/mission/h5/m`;
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -451,20 +452,20 @@ async function missions() {
       } else {
         await pigPetDoMission(item.mid);
         await $.wait(1000)
-        let parse
-        if (item.url) {
-          parse = url(item.url, true, true)
-        } else {
-          parse = {}
-        }
-        if (parse.query && parse.query.readTime) {
-          await queryMissionReceiveAfterStatus(parse.query.missionId);
-          await $.wait(parse.query.readTime * 1000)
-          await finishReadMission(parse.query.missionId, parse.query.readTime);
-        } else if (parse.query && parse.query.juid) {
-          await getJumpInfo(parse.query.juid)
-          await $.wait(4000)
-        }
+//        let parse
+//        if (item.url) {
+//          parse = url.parse(item.url, true, true)
+//        } else {
+//          parse = {}
+//        }
+//        if (parse.query && parse.query.readTime) {
+//          await queryMissionReceiveAfterStatus(parse.query.missionId);
+//          await $.wait(parse.query.readTime * 1000)
+//          await finishReadMission(parse.query.missionId, parse.query.readTime);
+//        } else if (parse.query && parse.query.juid) {
+//          await getJumpInfo(parse.query.juid)
+//          await $.wait(4000)
+//        }
       }
     }
   }
