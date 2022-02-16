@@ -452,7 +452,6 @@ async function missions() {
       } else {
         await pigPetDoMission(item.mid);
         await $.wait(1000)
-        }
       }
     }
   }
