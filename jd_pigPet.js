@@ -25,7 +25,6 @@ cron "12 0-23/6 * * *" script-path=jd_pigPet.js, tag=京东金融养猪猪
  */
 
 const $ = new Env('金融养猪');
-let url = 'https://u.jr.jd.com/uc-fe-wxgrowing/cloudpig/index/';
 const url = require('url');
 let cookiesArr = [], cookie = '', allMessage = '';
 const JD_API_HOST = 'https://ms.jr.jd.com/gw/generic/uc/h5/m';
