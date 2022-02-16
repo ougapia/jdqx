@@ -25,7 +25,7 @@ cron "12 0-23/6 * * *" script-path=jd_pigPet.js, tag=京东金融养猪猪
  */
 
 const $ = new Env('金融养猪');
-let cookiesArr = [], cookie = '', allMessage = '';
+let cookiesArr = [], cookie = '', allMessage = '',url = '';
 const JD_API_HOST = 'https://ms.jr.jd.com/gw/generic/uc/h5/m';
 const MISSION_BASE_API = `https://ms.jr.jd.com/gw/generic/mission/h5/m`;
 const notify = $.isNode() ? require('./sendNotify') : '';
