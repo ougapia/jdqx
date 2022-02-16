@@ -452,7 +452,7 @@ async function missions() {
       } else {
         await pigPetDoMission(item.mid);
         await $.wait(1000)
-        let parse ='https://u1.jr.jd.com/uc-fe-wxgrowing/cloudpig/index/,true,true'
+        let parse ='${MISSION_BASE_API}/queryMissionReceiveAfterStatus?reqData=${escape(JSON.stringify(body))},true,true'
  //       if (item.url) {
  //         parse = url.parse(item.url, true, true)
  //       } else {
