@@ -452,11 +452,7 @@ async function missions() {
       } else {
         await pigPetDoMission(item.mid);
         await $.wait(1000)
-        let parse
-        if (item.url) {
-          parse = url.parse(item.url, true, true)
-        } else {
-          parse = {}
+        let parse = {}
         }
         if (parse.query && parse.query.readTime) {
           await queryMissionReceiveAfterStatus(parse.query.missionId);
