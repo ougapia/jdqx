@@ -101,11 +101,11 @@ async function jdPlantBean() {
       subTitle = `【京东昵称】${$.plantBeanIndexResult.data.plantUserInfo.plantNickName}`;
       message += `【上期时间】${roundList[num - 1].dateDesc.replace('上期 ', '')}\n`;
       message += `【上期成长值】${roundList[num - 1].growth}\n`;
+      await stealFriendWater();
       await receiveNutrients();//定时领取营养液
       //await doHelp();//助力
      //await doTask();//做日常任务
       //await doEgg();
-      await stealFriendWater();
       //await doCultureBean();
       //await doGetReward();
       await showTaskProcess();
