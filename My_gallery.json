@@ -10,6 +10,7 @@
   {"config":"5 0,10 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_speed_sign_JDHelloWorld.js, tag=极速版签到"},
   {"config":"3 0,8 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jx_sign.js, tag=京喜签到"},
   {"config":"2 0-23/6 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_cash.js, tag=签到领现金"},
+  {"config":"30 0,8 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_joy_park_run.js, tag=汪汪乐园"},
   {"config":"12 0,13,20 * * * https://raw.githubusercontent.com/ougapia/jdqx/main/jd_jxmc.js, tag=京喜牧场"}
   ]
 }
